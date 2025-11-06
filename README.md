@@ -49,10 +49,25 @@ Give delay between commands using time.sleep(.5)
   | 4 (wrist rotation) | 0 – 180°             |
   | 5 (wrist bend)     | 0 – 270°             |
   | 6 (gripper)        | 0 – 180°             |
- 
-4. 
 
+
+ 4. Read servo current position:
+    Api: Arm_serial_servo_read(id)
+
+    Reads the current angle value of servo.
+
+    Test movement over time : Move servo with a non-zero time parameter (slower motion). Continuously read servo position in a loop to track progress.
+    Check clamp position when it clamps the cube.
+    Useful for debugging.
+
+ 5. Control all servos simultaneously:
+    Api: Arm_serial_servo_write6(S1, S2, S3, S4, S5, S6, time)
+    control angles of all servos.
+    S1: Angle value of No. 1 servo 0~180 and so on.
+    time is the running time of servos.  
    
+    Notice servo2 is reversed (180 - angle) → probably because of how servo2 is mounted physically. Moving “forward” for servo2 requires subtracting from 180°.
+    angle=90 is the centre position.
 
 
 
