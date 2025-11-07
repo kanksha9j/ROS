@@ -69,7 +69,8 @@ Give delay between commands using time.sleep(.5)
     Notice servo2 is reversed (180 - angle) → probably because of how servo2 is mounted physically. Moving “forward” for servo2 requires subtracting from 180°.
     angle=90 is the centre position.
 
-    ROS Basic Course
+ROS Basic Course
+
     ROS is an open source operating system for Robots.
     In ROS, nodes can publish as well as subscribe. And once a message is available, then messages flow using peer to peer communication.
 
