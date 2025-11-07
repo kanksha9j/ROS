@@ -32,37 +32,37 @@ Give delay between commands using time.sleep(.5)
 3. Control single servo:
    Api: Arm_serial_servo_write(id, angle, time)
 
-  | Parameter | Description       | Range / Notes                                            |  
-  | --------- | ----------------- | -------------------------------------------------------- |
-  |  id       | Servo number      | 1–6 (1 = base, 6 = top/gripper)                          |
-  |  angle    | Target angle      | 0–180° for servos 1–4 & 6; 0–270° for servo 5            |
-  |  time     | Movement duration | Time in ms or unit defined by library; 0 = fastest speed |
+   | Parameter | Description       | Range / Notes                                            |  
+   | --------- | ----------------- | -------------------------------------------------------- |
+   |  id       | Servo number      | 1–6 (1 = base, 6 = top/gripper)                          |
+   |  angle    | Target angle      | 0–180° for servos 1–4 & 6; 0–270° for servo 5            |
+   |  time     | Movement duration | Time in ms or unit defined by library; 0 = fastest speed |
 
-  Precaution: To avoid stalling the gripper (servo 6), use the table given to set proper angle to clamp objects according to its length. For cube range is from 0 to 134. Do 
-  not set larger than 134. 0= fully open.
+   Precaution: To avoid stalling the gripper (servo 6), use the table given to set proper angle to clamp objects according to its length. For cube range is from 0 to 134. Do 
+   not set larger than 134. 0= fully open.
 
-  | Servo ID           | Range                |  
-  | ------------------ | -------------------- |
-  | 1 (base)           | 0 – 180°             |
-  | 2 (shoulder)       | 0 – 180°             |
-  | 3 (elbow)          | 0 – 180°             |
-  | 4 (wrist rotation) | 0 – 180°             |
-  | 5 (wrist bend)     | 0 – 270°             |
-  | 6 (gripper)        | 0 – 180°             |
+   | Servo ID           | Range                |  
+   | ------------------ | -------------------- |
+   | 1 (base)           | 0 – 180°             |
+   | 2 (shoulder)       | 0 – 180°             |
+   | 3 (elbow)          | 0 – 180°             |
+   | 4 (wrist rotation) | 0 – 180°             |
+   | 5 (wrist bend)     | 0 – 270°             |
+   | 6 (gripper)        | 0 – 180°             |
 
 
  4. Read servo current position:
     Api: Arm_serial_servo_read(id)
-
+    
     Reads the current angle value of servo.
-
     Test movement over time : Move servo with a non-zero time parameter (slower motion). Continuously read servo position in a loop to track progress.
     Check clamp position when it clamps the cube.
     Useful for debugging.
 
- 5. Control all servos simultaneously:
+ 6. Control all servos simultaneously:
     Api: Arm_serial_servo_write6(S1, S2, S3, S4, S5, S6, time)
     control angles of all servos.
+    
     S1: Angle value of No. 1 servo 0~180 and so on.
     time is the running time of servos.  
    
