@@ -41,7 +41,7 @@ Give delay between commands using time.sleep(.5)
   Precaution: To avoid stalling the gripper (servo 6), use the table given to set proper angle to clamp objects according to its length. For cube range is from 0 to 134. Do 
   not set larger than 134. 0= fully open.
 
-  | Servo ID           
+  | Servo ID           | Range                |  
   | ------------------ | -------------------- |
   | 1 (base)           | 0 – 180°             |
   | 2 (shoulder)       | 0 – 180°             |
