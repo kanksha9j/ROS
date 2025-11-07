@@ -69,6 +69,27 @@ Give delay between commands using time.sleep(.5)
     Notice servo2 is reversed (180 - angle) → probably because of how servo2 is mounted physically. Moving “forward” for servo2 requires subtracting from 180°.
     angle=90 is the centre position.
 
+    ROS Basic Course
+    ROS is an open source operating system for Robots.
+    In ROS, nodes can publish as well as subscribe. And once a message is available, then messages flow using peer to peer communication.
+
+    ROS Master:
+    Keeps track of all active nodes, topics, and services. Helps nodes discover each other so publishers and subscribers can connect.
+    After discovery, messages flow peer-to-peer.
+
+    Parameter Server:
+    A central storage for parameters, accessible by all nodes. Stores key-value pairs (strings, numbers, booleans, arrays).
+    Commonly used for configuration data that multiple nodes might need.
+
+    The topic is one way channel. It sends data to subscriber but doesnt send anything back to publisher. 
+
+    3 Communication mechanisms:
+    1. ROS Topics are inherently asynchronous. The publisher does not wait for subscribers to process the message.
+    2. Use ROS Services for synchronous request-response: A client sends a request. It waits (blocks) until the server sends a response.
+    3. For long-running tasks, use ROS Actions, which are asynchronous but allow: Feedback messages during execution or after finishing. Can optionally wait (synchronously) 
+    until the action completes
+    
+
 
 
 
