@@ -1,0 +1,39 @@
+Got it! Let’s make it precise and factual, no extra fluff or assumptions.
+
+### 1. Forward Kinematics (FK)
+
+* **Definition:** Computes the position and orientation of the end-effector (robot hand or gripper) given the joint or servo angles.
+* **Use:** If you know the servo angles, FK tells you where the end-effector is in space.
+* **Formula:**
+  {Position} = f(theta_1, theta_2, ..., theta_n)
+
+### 2. Inverse Kinematics (IK)
+
+* **Definition:** Computes the joint or servo angles required to reach a specific position and orientation of the end-effector.
+* **Use:** If you know the position of the cube you want to pick, IK tells you what each servo angle should be.
+* **Challenge:** There may be multiple solutions, and some positions may be unreachable.
+
+### 3. Workspace Analysis
+
+* **Definition:** Studies all positions that the robot’s end-effector can reach given its joint limits.
+* **Use:** Helps check if the cube is within the robot’s reach.
+
+### 4. Trajectory Planning / Motion Planning
+
+* **Definition:** Determines a path for the end-effector to move smoothly from its current position to the target position.
+* **Use:** Ensures the robot moves without collisions and respects joint speed/acceleration limits.
+
+### 5. Jacobian (optional but useful)
+
+* **Definition:** Relates small changes in joint angles to small changes in end-effector position and orientation.
+* **Use:** Helps in precise control, velocity control, and some numerical IK solutions.
+
+### Terms you should study to calculate servo angles to pick a cube:
+
+1. **Inverse Kinematics (IK)** – the core concept to calculate angles from position.
+2. **Forward Kinematics (FK)** – needed to verify your IK solution.
+3. **Workspace and Reachability** – to ensure the cube is within range.
+4. **Trajectory / Motion Planning** – to move smoothly to the cube.
+5. **Joint Limits and Servo Constraints** – practical considerations for safe motion.
+6. **Basic 3D Geometry** – positions, distances, and rotations.
+7. **Homogeneous Transformation Matrices** – used to describe positions and orientations in FK/IK calculations.
