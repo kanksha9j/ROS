@@ -38,8 +38,8 @@ Give delay between commands using time.sleep(.5)
    |  angle    | Target angle      | 0–180° for servos 1–4 & 6; 0–270° for servo 5            |
    |  time     | Movement duration | Time in ms or unit defined by library; 0 = fastest speed |
 
-   Precaution: To avoid stalling the gripper (servo 6), use the table given to set proper angle to clamp objects according to its length. For cube range is from 0 to 134. Do 
-   not set larger than 134. 0= fully open.
+   Precaution: To avoid stalling the gripper (servo 6), use the table given to set proper angle to clamp objects according to its length. For cube range is from 0 to 134. 
+   Do not set larger than 134. 0= fully open.
 
    | Servo ID           | Range                |  
    | ------------------ | -------------------- |
@@ -78,11 +78,26 @@ ROS Basic Course
     Keeps track of all active nodes, topics, and services. Helps nodes discover each other so publishers and subscribers can connect.
     After discovery, messages flow peer-to-peer.
 
+    Node Manager (Master)
+    The node manager is used for registration and search of topics and service names, etc. The term Node Manager usually refers to a tool or process that manages nodes on       your system. It can start, stop, or monitor nodes, often providing visualization or control over multiple nodes. If there is no node manager in the entire ROS system,       there will be no communication between nodes.
+
     Parameter Server:
     A central storage for parameters, accessible by all nodes. Stores key-value pairs (strings, numbers, booleans, arrays).
     Commonly used for configuration data that multiple nodes might need.
 
+    Nodes:
+    A ROS node is basically a process that communicates with other nodes to form a complete robot system. Each node has its own responsibilities, like:
+    -Reading sensor data (e.g., camera, LiDAR)
+    -Controlling motors or servos, etc.
+
+    Topics:
+    Topics are a way of delivering messages (publish/subscribe). Each message must be published to the corresponding topic, and each topic is strongly typed. ROS topic 
+    messages can be transmitted using TCP/IP or UDP. The default transmission method used by ROS is TCP/IP.
     The topic is one way channel. It sends data to subscriber but doesnt send anything back to publisher. 
+
+    Services:
+    A ROS service is a synchronous request-response communication between nodes. One node offers a service (the “server”). Another node calls the service (the “client”). 
+    The client waits until the server responds with a result.
 
     3 Communication mechanisms:
     1. ROS Topics are inherently asynchronous. The publisher does not wait for subscribers to process the message.
