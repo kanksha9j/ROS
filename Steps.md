@@ -50,6 +50,22 @@ ROS commands:
    rosrun turtlesim turtlesim_node                        #rosrun pkg_name executable_program. Most other ros node programs are started by rosrun.
    rosnode list                                           #check turtlesim node started
    rosnode info /turtlesim                                #gives info about node turtlesim
+
+ROS node – Fundamental unit of ROS programs.
+
+ROS topic publisher & subscriber – Communication between nodes.
+
+ROS service client & server – Request-response communication for robot commands.
+
+ROS parameter server – Configurations and sharing values across nodes.
+
+ROS-launch file – Running multiple nodes together.
+
+2. Visualization & Geometry
+
+ROS-rviz – Essential for visualizing your robot, MoveIt planning scenes, and paths.
+
+ROS-TF transformations – Understanding coordinate frames is critical for motion planning.
    
 
 
