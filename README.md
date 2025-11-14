@@ -104,6 +104,18 @@ ROS Basic Course
     2. Use ROS Services for synchronous request-response: A client sends a request. It waits (blocks) until the server sends a response.
     3. For long-running tasks, use ROS Actions, which are asynchronous but allow: Feedback messages during execution or after finishing. Can optionally wait (synchronously) 
     until the action completes
+
+    Common components:
+    
+    launch startup file: Launch File is a way to start multiple nodes at the same time in ROS. It can also automatically start the ROS Master node manager, and can          
+    implement various configurations of each node
+    TF coordinate transformation: TF is a ROS package that keeps track of all the coordinate frames in your robot and environment. It uses a tree structure where every          frame has a parent frame (e.g., gripper → arm → base → world). eg: You can ask TF: “What are the coordinates of the camera point in the robot base frame?”
+    Rviz: RViz is a 3D visualization tool for ROS. It helps you see what your robot is doing and how it interacts with its environment. rviz can also display robot sensor       information, robot motion status, changes in the surrounding environment, etc. in a graphical manner in real time.
+    Gazebo: Gazebo is a powerful three-dimensional physics simulation platform with a powerful physics engine, high-quality graphics rendering, convenient programming and       graphics interfaces.
+    QT toolbox: In order to facilitate visual debugging and display, ROS provides a Qt-based background graphics tool suite - rqt_common_plugins,It contains many practical      tools: log output tool (rqt_console), calculation graph visualization tool (rqt_graph), data drawing tool (rqt_plot), parameter dynamic configuration tool       
+    (rqt_reconfigure)
+    Navigation: The Navigation package in ROS is used for 2D robot navigation. It helps a robot move safely from one point to another in an environment with safe and            reliable speed control.
+    MoveIt: This function package is the most commonly used tool package, mainly used for trajectory planning. 
     
 
 
