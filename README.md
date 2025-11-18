@@ -116,7 +116,13 @@ ROS Basic Course
     (rqt_reconfigure)
     Navigation: The Navigation package in ROS is used for 2D robot navigation. It helps a robot move safely from one point to another in an environment with safe and            reliable speed control.
     MoveIt: This function package is the most commonly used tool package, mainly used for trajectory planning. 
-    
+
+    When you give roscore command: 
+    It starts three main components:
+    1. ROS Master (rosmaster) – central naming and registration service.
+    2. ROS Parameter Server – provides storage for configuration parameters accessible to all nodes.
+    3. rosout Logging Node – handles logging output for ROS nodes.
+    In short, roscore is a Python script that launches these components.
 
 
 
