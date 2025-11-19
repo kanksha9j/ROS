@@ -44,12 +44,12 @@ ROS commands:
    catkin_create_pkg learn_topic std_msgs rospy roscpp geometry_msgs turtlesim  #name of function package is learn_topic, rest are dependent libraries of the function package
 
 3. Start ros service 
-   roscore                                       #starts roscore service. only one roscore service can be run. starts rosmaster, rosout node and parameter server.
-   rosnode list                                  #lists all rosnode started. /rosout node is started. rosout node logs all the log messages received from all the  nodes.
-   rosnode info /rosout                          #gives info about rosout
-   rosrun turtlesim turtlesim_node               #rosrun pkg_name executable_program. Most other ros node programs are started by rosrun.
-   rosnode list                                  #check turtlesim node started
-   rosnode info /turtlesim                       #gives info about node turtlesim
+- roscore                                       #starts roscore service. only one roscore service can be run. starts rosmaster, rosout node and parameter server.
+- rosnode list                                  #lists all rosnode started. /rosout node is started. rosout node logs all the log messages received from all the  nodes.
+- rosnode info /rosout                          #gives info about rosout
+- rosrun turtlesim turtlesim_node               #rosrun pkg_name executable_program. Most other ros node programs are started by rosrun.
+- rosnode list                                  #check turtlesim node started
+- rosnode info /turtlesim                       #gives info about node turtlesim
 
 4. ROS node – Fundamental unit of ROS programs.
  Create a ROS node with command: roscore in ros_ws workspace.
