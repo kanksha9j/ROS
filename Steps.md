@@ -29,19 +29,19 @@ a beep should occur.
 ROS commands:
 
 1. Create a workspace:
-   mkdir ros_ws
-   cd ~/ros_ws
-   mkdir src
-   cd ~/ros_ws/src                                         #store function packages
-   catkin_init_workspace                                   #initialize workspace
-   cd ~/ros_ws
-   catkin_make                                             #compile workspace
-   echo "source ~/ros_ws/devel/setup.bash" >> ~/.bashrc    #add workspace to environment variables
-   source ~/.bashrc                                        #refresh the environment variables
+-  mkdir ros_ws
+-  cd ~/ros_ws
+-  mkdir src
+-  cd ~/ros_ws/src                                         #store function packages
+-  catkin_init_workspace                                   #initialize workspace
+-  cd ~/ros_ws
+-  catkin_make                                             #compile workspace
+-  echo "source ~/ros_ws/devel/setup.bash" >> ~/.bashrc    #add workspace to environment variables
+-  source ~/.bashrc                                        #refresh the environment variables
 
 2. Create a function package:
-   cd ~/ros_ws/src
-   catkin_create_pkg learn_topic std_msgs rospy roscpp geometry_msgs turtlesim  #name of function package is learn_topic, rest are dependent libraries of the function package
+- cd ~/ros_ws/src
+- catkin_create_pkg learn_topic std_msgs rospy roscpp geometry_msgs turtlesim  #name of function package is learn_topic, rest are dependent libraries of the function package
 
 3. Start ros service 
 - roscore                                       #starts roscore service. only one roscore service can be run. starts rosmaster, rosout node and parameter server.
