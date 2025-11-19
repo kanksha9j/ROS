@@ -32,8 +32,8 @@ ROS commands:
 -  mkdir ros_ws
 -  cd ~/ros_ws
 -  mkdir src
--  cd ~/ros_ws/src                                         #store function packages
--  catkin_init_workspace                                   #initialize workspace
+-  cd ~/ros_ws/src                                         ##store function packages
+-  catkin_init_workspace                                   ##initialize workspace
 -  cd ~/ros_ws
 -  catkin_make                                             #compile workspace
 -  echo "source ~/ros_ws/devel/setup.bash" >> ~/.bashrc    #add workspace to environment variables
