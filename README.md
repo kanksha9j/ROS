@@ -124,6 +124,24 @@ ROS Basic Course
     3. rosout Logging Node – handles logging output for ROS nodes.
     In short, roscore is a Python script that launches these components.
 
+    Experiments:
+
+    1. ROS Publisher:
+
+    Modify values: 
+    - msg.linear.x = 2.0;  // forward
+    - msg.angular.z = 0.0; // straight
+
+    - msg.linear.x = -2.0;  // backward
+    - msg.angular.z = 0.0; // straight
+
+    - msg.linear.x =  0.8;  // backward
+    - msg.angular.z = 0.6; // clockwise
+
+    - msg.linear.x =  0.8;  // backward
+    - msg.angular.z = -0.6; // counter-clockwise
+ 
+
 
 
 
