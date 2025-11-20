@@ -51,10 +51,17 @@ ROS commands:
 - rosnode list                                  #check turtlesim node started
 - rosnode info /turtlesim                       #gives info about node turtlesim
 
-4. ROS node – Fundamental unit of ROS programs.
- Create a ROS node with command: roscore in ros_ws workspace.
-
-ROS topic publisher & subscriber – Communication between nodes.
+4. ROS topic publisher & subscriber – Communication between nodes.
+   - create a turtle_velocity_publisher.cpp and turtle_pose_subscriber.cpp files in learn_topic/src/ folder
+   - add executable and target link libraries in CmakeList.txt in learn_topic folder.
+   - cd ros_ws/
+   - catkin_make                                  #compiles the cpp files
+   - source devel/setup.bash                      #required only once in the opened terminal.
+   - roscore
+   - rosrun turtlesim turtlesim_node              #it will start a simulator which subscribes to velocity msgs from publisher.cpp and publishes pose msgs
+   - rosrun learn_topic turtle_pos_subscriber     #subscribes to cmd_pos msgs from turtlesim_node
+   - rosrun learn_topic turtle_velocity_publisher #publiches velocity msgs on topic cmd_vel
+   - rosrun turtlesim turtle_teleop_key           #this is an internal publisher can be used instead of above.
 
 ROS service client & server – Request-response communication for robot commands.
 
