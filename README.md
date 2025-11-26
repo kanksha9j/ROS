@@ -140,6 +140,14 @@ ROS Basic Course
 
     - msg.linear.x =  0.8;  // backward
     - msg.angular.z = -0.6; // counter-clockwise
+
+   Action file:
+   - The .action file has the goal definition, then the result definition, then the feedback definition, with each part separated by 3 hyphens (---).
+     
+   Launch file:
+   - The launch file is a file provided by ROS for starting multiple nodes. The format is XML format.
+
+     
  
 
 
