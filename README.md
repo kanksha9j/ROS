@@ -146,6 +146,16 @@ ROS Basic Course
      
    Launch file:
    - The launch file is a file provided by ROS for starting multiple nodes. The format is XML format.
+   - roslaunch can start multiple nodes at the same time:
+     roslaunch <pkg_name> <launch_file_name>
+   - launch file for single node:
+     <node 
+       pkg="pkg_name" type="excutable_name" name="node_name">
+     </node>
+
+     
+
+     
 
      
  
