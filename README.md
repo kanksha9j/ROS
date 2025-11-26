@@ -153,6 +153,12 @@ ROS Basic Course
        pkg="pkg_name" type="excutable_name" name="node_name">
      </node>
 
+     pkg: the name of the function package where the node is located
+     type: the name of the executable program running the node
+     name: The name of the node does not have to be the same as the name of the node defined in the program, it can be named arbitrarily
+   - launch file for multiple nodes:
+     
+
      
 
      
