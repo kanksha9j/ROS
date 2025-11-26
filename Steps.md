@@ -63,7 +63,24 @@ ROS commands:
    - rosrun learn_topic turtle_velocity_publisher #publiches velocity msgs on topic cmd_vel
    - rosrun turtlesim turtle_teleop_key           #this is an internal publisher can be used instead of above.
 
-ROS service client & server – Request-response communication for robot commands.
+5. ROS service client & server – Request-response communication for robot commands.
+
+6. ROS Action client & server – Communication between nodes with continous feedback.
+   - catkin_create_pkg learn_action std_msgs rospy roscpp actionlib actionlib_msgs      #create learn_action function package inside ros_ws/src folder
+   - catkin_make                                                                        #compile
+   - cd ~/ros_ws/src/learn_action
+     mkdir action
+   - create a new file named DoDishes.action                                            #create action file that contains 3 sections: goal, result & feedback. Write the 
+                                                                                         variables used.
+   - Modify the CMakeLists.txt file                                                     # add action and services
+   - create action_client.cpp and action_server.cpp files in learn_action/src/ folder
+   - add executable and target link libraries in CmakeList.txt in learn_action folder.
+   - cd ros_ws/
+   - catkin_make                                                                        #compiles the cpp files
+   - roscore
+   - rosrun learn_action action_client                                                  #it will start client and wait for server to start
+   - rosrun learn_action action_server                                                  #it will start server, and send feedback messages to client.
+   
 
 ROS parameter server – Configurations and sharing values across nodes.
 
