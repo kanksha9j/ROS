@@ -101,11 +101,19 @@ ROS commands:
 
 ROS-launch file – Running multiple nodes together.
 
+
+8. ROS-TF transformations – Understanding coordinate frames is critical for motion planning.
+   -
+   rosrun tf tf_monitor
+   rosrun tf tf_monitor source_frame target_frame # print the release status of all coordinate systems in the TF tree,
+   rosrun tf tf_echo source_frame target_frame # tf_echo: Used to view the transformation relationship between specified coordinate systems, terminal input.
+   rosrun tf static_transform_publisher x y x yaw pitch roll frame_id child_frame_id period_in_ms # static_transform_publisher: Used to publish static coordinate transformations between two coordinate systems that do not undergo relative position changes
+   rosrun rqt_tf_tree rqt_tf_tree  # This is a real-time tool that observes the coordinate system tree published on ros and uses the refresh button to update the contents of the tree
+   
 2. Visualization & Geometry
 
 ROS-rviz – Essential for visualizing your robot, MoveIt planning scenes, and paths.
 
-ROS-TF transformations – Understanding coordinate frames is critical for motion planning.
    
 
 
