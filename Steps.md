@@ -82,7 +82,22 @@ ROS commands:
    - rosrun learn_action action_server                                                  #it will start server, and send feedback messages to client.
    
 
-ROS parameter server – Configurations and sharing values across nodes.
+7. ROS parameter server – Configurations and sharing values across nodes.
+   - roslaunch learn_launch turtle_node.launch # start a node
+   - rosparam list                             # list all the parameters in the parameter server of the currently running ros node
+   - rosparam get /turtle/background_b         # (rosparam get [parameter])This command is to get the parameter value of a certain parameter.
+   - rosparam set /turtle/background_b 0       # (rosparam set [parameter] [value]) This command is to set the parameter value of a certain parameter. Do get afterwards.
+   - rosparam get /turtle/background_b         # need to do after set. 
+   - rosparam delete /turtle/background_b      # (rosparam delete [parameter]) This command is used to delete a certain parameter.
+   - rosparam dump turtle.yaml                 # (rosparam dump [file])This command is used to export all parameter values of the current ros parameter service table and 
+                                                 save them to a file.
+   - rosparam load turtle_changed.yaml         # rosparam load [file] This command can load the parameter table file to the parameter server to realize the function of 
+                                                 modifying multiple parameters at the same time.
+   - roslaunch learn_launch turtle_param_set.launch # load the parameter file in launch file. Add following in launch file and create load a .yaml file with parameter 
+                                                      values:
+
+     <rosparam file="$(find learn_launch)/param/background_rgb.yaml" command="load"/>
+   
 
 ROS-launch file – Running multiple nodes together.
 
