@@ -161,7 +161,33 @@ ROS Basic Course
 
      urdf model:
      -
-     - URDF is the robot description format in ROS. Its full name is Unified Robot Description Format, which describes the robot's appearance, physical attributes, joint types, etc. 
+     - URDF is the robot description format in ROS. Its full name is Unified Robot Description Format, which describes the robot's appearance, physical attributes, joint types, etc.
+    
+     rviz:
+    -
+    - RViz is a visualization tool in ROS. It shows:
+     Robot model
+     Camera/LiDAR data
+     TF frames
+     Planning scenes
+     Planned trajectories
+
+     moveit:
+     MoveIt is a motion planning framework.
+     -
+     It does:
+     Inverse kinematics
+     Collision checking
+     Path planning (OMPL planners)
+     Trajectory generation
+     Robot control integration
+     Planning scene updates
+
+     Moveit launch demo file opens:
+     ✔ MoveIt core starts: Computes paths, collisions, IK.
+     ✔ Fake controller starts: Simulates motion.
+     ✔ Robot URDF + TF loads: So MoveIt knows robot structure and pose.
+     ✔ RViz starts with MoveIt plugin: So you can interact visually.
 
      
 
