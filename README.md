@@ -157,7 +157,11 @@ ROS Basic Course
      type: the name of the executable program running the node
      name: The name of the node does not have to be the same as the name of the node defined in the program, it can be named arbitrarily
    - launch file for multiple nodes:
-     
+
+
+     urdf model:
+     -
+     - URDF is the robot description format in ROS. Its full name is Unified Robot Description Format, which describes the robot's appearance, physical attributes, joint types, etc. 
 
      
 
