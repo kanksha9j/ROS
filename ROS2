@@ -1,0 +1,4 @@
+Packages:
+Contain one or more nodes and information about the package and instructions of how to build the package. 
+One package can be written in python that controls behaviour of robot. other package that reads the sensors. 
+together can build packages in different languages.
