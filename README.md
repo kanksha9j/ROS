@@ -90,14 +90,18 @@ ROS Basic Course
     -Reading sensor data (e.g., camera, LiDAR)
     -Controlling motors or servos, etc.
 
-    Topics:
+    Topics: (Publish - Subscriber model)
+    Topic is associated with a specific message type
     Topics are a way of delivering messages (publish/subscribe). Each message must be published to the corresponding topic, and each topic is strongly typed. ROS topic 
     messages can be transmitted using TCP/IP or UDP. The default transmission method used by ROS is TCP/IP.
     The topic is one way channel. It sends data to subscriber but doesnt send anything back to publisher. 
 
-    Services:
+    Services: (Request-response model)
     A ROS service is a synchronous request-response communication between nodes. One node offers a service (the “server”). Another node calls the service (the “client”). 
     The client waits until the server responds with a result.
+
+    ROS Actions: (Request-Feedback-Response model)
+    - gives feedback till the response is received . eg: giving message like snapshot receiveing in progress 3..2..1
 
     3 Communication mechanisms:
     1. ROS Topics are inherently asynchronous. The publisher does not wait for subscribers to process the message.
